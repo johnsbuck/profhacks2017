@@ -1,6 +1,6 @@
 var mongoose = require('mongoose');
 
-var UserSchema = new mongoose.Schema({
+var UsersSchema = new mongoose.Schema({
   //MLH Data
   first_name: String,
   last_name: String,
@@ -21,11 +21,10 @@ var UserSchema = new mongoose.Schema({
   sms_notifications: Boolean,
 
   //Internal
-  status: {type: String, default: 'pending'}
+  status: {type: String, default: 'pending'},
+  travel: String
 });
 
-var User = mongoose.model('User', 'UserSchema');
+var Users = mongoose.model('Users', UserSchema);
 
-module.exports = {
-    User: User
-};
+module.exports = Users;

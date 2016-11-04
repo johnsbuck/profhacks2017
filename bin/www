@@ -10,15 +10,6 @@ var http = require('http');
 var mongoose = require('mongoose');
 
 /**
-* Database connection string
-*/
-
-var uristring =
-process.env.MONGOLAB_URI ||
-process.env.MONGOHQ_URL ||
-'mongodb://localhost/HelloMongoose'; //TODO: Change this string
-
-/**
  * Get port from environment and store in Express.
  */
 
@@ -26,15 +17,25 @@ var port = normalizePort(process.env.PORT || '3000');
 app.set('port', port);
 
 /**
+* Database connection string
+*/
+
+var uristring =
+process.env.MONGOLAB_URI ||
+process.env.MONGOHQ_URL ||
+'mongodb://localhost/mongoose'; //TODO: Change this string
+
+/**
 * Set mongoose connection
 */
 
-mongoose.connect(uristring, function(err, res) {
+mongoose.connect(uristring, function(err, db) {
   if(err){
     console.log('ERROR: Could not connect to ' + uristring + ". " + err);
   }
   else{
     console.log('Succesfully connected to ' + uristring);
+    console.log(db);
   }
 });
 
