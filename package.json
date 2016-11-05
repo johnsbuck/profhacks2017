@@ -5,17 +5,18 @@
   "license": "MIT",
   "scripts": {
     "start": "node ./bin/www",
-    "test": "supervisor node ./bin/www"
+    "test": "supervisor node ./bin/www",
+    "postinstall": "gulp default"
   },
   "dependencies": {
     "body-parser": "~1.15.1",
     "cookie-parser": "~1.4.3",
     "debug": "~2.2.0",
     "express": "~4.13.4",
-    "mongodb": "^2.2.11",
-    "mongoose": "^4.6.5",
     "morgan": "~1.7.0",
+    "pg": "^6.1.0",
     "pug": "^2.0.0-beta6",
+    "sequelize": "^3.24.8",
     "serve-favicon": "~2.3.0"
   },
   "devDependencies": {
@@ -30,5 +31,8 @@
     "gulp-rename": "^1.2.2",
     "gulp-uglify": "^1.5.4",
     "jquery": "^1.11.3"
+  },
+  "engines": {
+    "node": "4.4.0"
   }
 }

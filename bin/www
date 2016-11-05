@@ -7,7 +7,7 @@
 var app = require('../app');
 var debug = require('debug')('profhacks2017:server');
 var http = require('http');
-var mongoose = require('mongoose');
+var model = require('../models');
 
 /**
  * Get port from environment and store in Express.
@@ -15,29 +15,6 @@ var mongoose = require('mongoose');
 
 var port = normalizePort(process.env.PORT || '3000');
 app.set('port', port);
-
-/**
-* Database connection string
-*/
-
-var uristring =
-process.env.MONGOLAB_URI ||
-process.env.MONGOHQ_URL ||
-'mongodb://localhost/mongoose'; //TODO: Change this string
-
-/**
-* Set mongoose connection
-*/
-
-mongoose.connect(uristring, function(err, db) {
-  if(err){
-    console.log('ERROR: Could not connect to ' + uristring + ". " + err);
-  }
-  else{
-    console.log('Succesfully connected to ' + uristring);
-    console.log(db);
-  }
-});
 
 /**
  * Create HTTP server.
