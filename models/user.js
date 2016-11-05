@@ -16,7 +16,7 @@ module.exports = function(sequelize, DataTypes) {
     school: DataTypes.STRING,
 
     //Custom Data
-    resume: DataTypes.BLOB('medium'),
+    resume: DataTypes.BLOB,
     teamates: DataTypes.STRING,
     first_hackathon: DataTypes.BOOLEAN,
     sms_notifications: DataTypes.BOOLEAN,

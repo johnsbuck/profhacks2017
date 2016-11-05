@@ -14,6 +14,10 @@ var uristring =
 process.env.DATABASE_URL ||
 'postgres://hoot:hoot@localhost/prof'; //TODO: Change this string
 
+/**
+* Initialize sequelize
+*/
+
 if (uristring) {
   var sequelize = new Sequelize(uristring, {
     dialect: "postgres",
