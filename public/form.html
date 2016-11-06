@@ -28,64 +28,145 @@
           <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
           <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
       <![endif]-->
+
+      <style>
+    		.navbar-custom {
+    			background-color:#EBC800;
+    		}
+    		.btn-lg{
+    			background-color:#898989;
+    			border-color:#898989;
+    		}
+    		header {
+          background: url('img/pattern.png') no-repeat center center fixed;
+    			background-color:#898989
+    		}
+
+        .logo {
+          padding: 200px;
+          background: url('img/logo-color-poly.svg') no-repeat center center;
+                -webkit-background-size: cover;
+                -moz-background-size: cover;
+                -o-background-size: cover;
+                background-size: cover;
+          background-size: 800px 1200px;
+        }
+
+    		#about.success {
+    			background-color:#898989;
+    		}
+    		hr.star-light::after {
+    			background-color:#898989;
+    		}
+    		.footer .footer-above {
+    			background-color:#898989;
+    		}
+    		.footer .footer-below {
+    			background-color:#6E6D6C;
+    		}
+        #johnbuck{
+          float:  right;
+          margin-right: 15%;
+        }
+        #owl{
+          float: right;
+          margin: 10%;
+          position: fixed;
+          max-width: 610px;
+          max-height: 400px;
+        }
+      </style>
+
   </head>
-  <body>
-    <div class="row">
-      <div class="col-lg-4">
+  <body id="page-top" class="index">
+
+    <!-- Navigation -->
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="index.html">ProfHacks 2017</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+    <section>
+      <div class="row">
+      <br />
+      <br />
+
+        <div id="johnbuck" class="col-lg-4">
+          <h1>Profhacks Registration</h1>
+        <br />
+          <form>
+            <div class="form-group">
+              First Name:<br>
+              <input type="text" name="firstName" class="form-control"><br>
+              Last Name:<br>
+              <input type="text" name="lastName" class="form-control"><br>
+              Date of Birth:<br>
+              <input type="date" name="birthDate" class="form-control"><br>
+              Gender:<br>
+              <select name="gender" class="form-control">
+                <option disabled selected value> -- Select an option -- </option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+              </select>
+              School:<br>
+              <input type="text" name="school" class="form-control"><br>
+              Major:<br>
+              <input type="text" name="major" class="form-control"><br>
+              Graduation Date:<br>
+              <input type="date" name="gradDate" class="form-control"><br>
+              Shirt Size:<br>
+              <select name="shirtSize" class="form-control">
+                <option disabled selected value> -- Select an option -- </option>
+                <option value="xSmall">Extra Small</option>
+                <option value="small">Small</option>
+                <option value="medium">Medium</option>
+                <option value="large">Large</option>
+                <option value="xLarge">Extra Large</option>
+              </select><br>
+              Dietary Restrictions:<br>
+              <select name="dietaryRestrictions" class="form-control">
+                <option value="none">None</option>
+                <option value="vegetarian">vegetarian</option>
+                <option value="vegan">Vegan</option>
+                <option value="glutenFree">GlutenFree</option>
+                <option value="other">Other</option>
+              </select>
+              Special Needs:<br>
+              <input type="text" name="specialNeeds" class="form-control"><br>
+              Phone Number:<br>
+              <input type="number" name="phoneNumber" class="form-control"><br>
+              Would you like to recieve SMS notifications about Profhacks?<br>
+              <input type="radio" name="smsNotifications" value="yes">&nbsp; Yes &nbsp; &nbsp;
+              <input type="radio" name="smsNotifications" value="no">&nbsp; No <br>
+              Is this your first hackathon?<br>
+              <input type="radio" name="firstHackathon" value="yes">&nbsp; Yes &nbsp; &nbsp;
+              <input type="radio" name="firstHackathon" value="no">&nbsp; No
+              <br>
+            </div>
+          </form>
+        </div>
+        <div id="owl"  class="col-lg-4">
+          <img src="img/logo-color-poly.svg" />
+        </div>
       </div>
-      <div class="col-lg-4">
-        <form>
-          <div class="form-group">
-            First Name:<br>
-            <input type="text" name="firstName" class="form-control"><br>
-            Last Name:<br>
-            <input type="text" name="lastName" class="form-control"><br>
-            Date of Birth:<br>
-            <input type="date" name="birthDate" class="form-control"><br>
-            Gender:<br>
-            <select name="gender" class="form-control">
-              <option disabled selected value> -- Select an option -- </option>
-              <option value="male">Male</option>
-              <option value="female">Female</option>
-              <option value="other">Other</option>
-            </select>
-            School:<br>
-            <input type="text" name="school" class="form-control"><br>
-            Major:<br>
-            <input type="text" name="major" class="form-control"><br>
-            Graduation Date:<br>
-            <input type="date" name="gradDate" class="form-control"><br>
-            Shirt Size:<br>
-            <select name="shirtSize" class="form-control">
-              <option disabled selected value> -- Select an option -- </option>
-              <option value="xSmall">Extra Small</option>
-              <option value="small">Small</option>
-              <option value="medium">Medium</option>
-              <option value="large">Large</option>
-              <option value="xLarge">Extra Large</option>
-            </select><br>
-            Dietary Restrictions:<br>
-            <select name="dietaryRestrictions" class="form-control">
-              <option value="none">None</option>
-              <option value="vegetarian">vegetarian</option>
-              <option value="vegan">Vegan</option>
-              <option value="glutenFree">GlutenFree</option>
-              <option value="other">Other</option>
-            </select>
-            Special Needs:<br>
-            <input type="text" name="specialNeeds" class="form-control"><br>
-            Phone Number:<br>
-            <input type="number" name="phoneNumber" class="form-control"><br>
-            Would you like to recieve SMS notifications about Profhacks?<br>
-            <input type="radio" name="smsNotifications" value="yes">&nbsp; Yes &nbsp; &nbsp;
-            <input type="radio" name="smsNotifications" value="no">&nbsp; No <br>
-            Is this your first hackathon?<br>
-            <input type="radio" name="firstHackathon" value="yes">&nbsp; Yes &nbsp; &nbsp;
-            <input type="radio" name="firstHackathon" value="no">&nbsp; No
-            <br>
-          </div>
-        </form>
-      </div>
-    </div>
+    </section>
   </body>
 </html>
