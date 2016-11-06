@@ -73,6 +73,7 @@ hr.star-primary:after {
 }
 
 header {
+	min-width: 400px;
 	text-align: center;
 	background: @theme-success;
 	color: white;
@@ -198,11 +199,12 @@ header {
 }
 
 section {
-    padding: 100px 0;
-    h2 {
-    	margin: 0;
-    	font-size: 3em;
-    }
+	min-width: 400px;
+  padding: 100px 0;
+  h2 {
+  	margin: 0;
+  	font-size: 3em;
+  }
 }
 
 section.success {
@@ -332,6 +334,7 @@ form .row:first-child .floating-label-form-group {
 
 footer {
 	color: white;
+	min-width: 400px;
 	h3 {
 		margin-bottom: 30px;
 	}
@@ -363,6 +366,23 @@ footer {
 	&.active {
 		color: @theme-success;
 		background: white;
+		border: solid 2px white;
+	}
+}
+
+.btn-outline-inverse {
+	color: @theme-success;
+	font-size: 20px;
+	border: solid 2px white;
+	background: white;
+	transition: all 0.3s ease-in-out;
+	margin-top: 15px;
+	&:hover,
+	&:focus,
+	&:active,
+	&.active {
+		color: white;
+		background: transparent;
 		border: solid 2px white;
 	}
 }
@@ -473,22 +493,4 @@ footer {
     	opacity: 0;
     	display: none;
     }
-}
-
-.btn {
-  -webkit-border-radius: 28;
-  -moz-border-radius: 28;
-  border-radius: 28px;
-  font-family: Arial;
-  color: #FFFFFF;
-  font-size: 20px;
-  background: #EBC800;
-	margin-top: 20px;
-  padding: 10px 20px 10px 20px;
-  text-decoration: none;
-}
-
-.btn:hover {
-  background: #AB8800;
-  text-decoration: none;
 }
