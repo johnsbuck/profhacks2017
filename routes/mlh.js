@@ -4,9 +4,9 @@ var router = express.Router();
 
 router.get('/auth', function(req, res, next) {
   res.redirect("https://my.mlh.io/oauth/authorize?client_id=fc30a89abaa8a953a070443edcb5317c3d7d27c0866104a60420e687f4f75cce" +
-    "&redirect_uri=https://gentle-retreat-46056.herokuapp.com/mlh/token&response_type=code&scope=email+education+birthday");
+    "&redirect_uri=http://localhost:3000/mlh/token&response_type=code&scope=email+education+birthday");
   /*res.redirect("https://my.mlh.io/oauth/authorize?client_id=fc30a89abaa8a953a070443edcb5317c3d7d27c0866104a60420e687f4f75cce" +
-    "&redirect_uri=https://gentle-retreat-46056.herokuapp.com/&response_type=token&scope=email+education+birthday")*/
+    "&redirect_uri=http://localhost:3000/&response_type=token&scope=email+education+birthday")*/
   res.end();
 });
 
@@ -18,7 +18,7 @@ router.get('/token', function(req, res, next) {
     "client_secret": process.env.SECRET_KEY,
     "code": code,
     "grant_type": "authorization_code",
-    "redirect_uri": "https://gentle-retreat-46056.herokuapp.com"
+    "redirect_uri": "http://localhost:3000/"
   });
 
   var options = {

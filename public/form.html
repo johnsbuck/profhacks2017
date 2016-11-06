@@ -30,5 +30,62 @@
       <![endif]-->
   </head>
   <body>
+    <div class="row">
+      <div class="col-lg-4">
+      </div>
+      <div class="col-lg-4">
+        <form>
+          <div class="form-group">
+            First Name:<br>
+            <input type="text" name="firstName" class="form-control"><br>
+            Last Name:<br>
+            <input type="text" name="lastName" class="form-control"><br>
+            Date of Birth:<br>
+            <input type="date" name="birthDate" class="form-control"><br>
+            Gender:<br>
+            <select name="gender" class="form-control">
+              <option disabled selected value> -- Select an option -- </option>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+              <option value="other">Other</option>
+            </select>
+            School:<br>
+            <input type="text" name="school" class="form-control"><br>
+            Major:<br>
+            <input type="text" name="major" class="form-control"><br>
+            Graduation Date:<br>
+            <input type="date" name="gradDate" class="form-control"><br>
+            Shirt Size:<br>
+            <select name="shirtSize" class="form-control">
+              <option disabled selected value> -- Select an option -- </option>
+              <option value="xSmall">Extra Small</option>
+              <option value="small">Small</option>
+              <option value="medium">Medium</option>
+              <option value="large">Large</option>
+              <option value="xLarge">Extra Large</option>
+            </select><br>
+            Dietary Restrictions:<br>
+            <select name="dietaryRestrictions" class="form-control">
+              <option value="none">None</option>
+              <option value="vegetarian">vegetarian</option>
+              <option value="vegan">Vegan</option>
+              <option value="glutenFree">GlutenFree</option>
+              <option value="other">Other</option>
+            </select>
+            Special Needs:<br>
+            <input type="text" name="specialNeeds" class="form-control"><br>
+            Phone Number:<br>
+            <input type="number" name="phoneNumber" class="form-control"><br>
+            Would you like to recieve SMS notifications about Profhacks?<br>
+            <input type="radio" name="smsNotifications" value="yes">&nbsp; Yes &nbsp; &nbsp;
+            <input type="radio" name="smsNotifications" value="no">&nbsp; No <br>
+            Is this your first hackathon?<br>
+            <input type="radio" name="firstHackathon" value="yes">&nbsp; Yes &nbsp; &nbsp;
+            <input type="radio" name="firstHackathon" value="no">&nbsp; No
+            <br>
+          </div>
+        </form>
+      </div>
+    </div>
   </body>
 </html>
