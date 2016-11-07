@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="profhacks">
 
   <head>
 
@@ -110,14 +110,14 @@
           <h1 id="title">Profhacks Registration</h1>
         <br />
         <br />
-          <form>
+          <form ng-controller="formCtrl" name="regForm" class="regForm">
             <div class="form-group">
               First Name:<br>
-              <input type="text" name="firstName" class="form-control"><br>
+              <input type="text" name="first_name" class="form-control" value="{{data.first_name}}"><br>
               Last Name:<br>
-              <input type="text" name="lastName" class="form-control"><br>
+              <input type="text" name="last_name" class="form-control" value="{{data.last_name}}"><br>
               Date of Birth:<br>
-              <input type="date" name="birthDate" class="form-control"><br>
+              <input type="date" name="date_of_birth" class="form-control" value="{{data.date_of_birth}}"><br>
               Gender:<br>
               <select name="gender" class="form-control">
                 <option disabled selected value> -- Select an option -- </option>
@@ -126,13 +126,13 @@
                 <option value="other">Other</option>
               </select>
               School:<br>
-              <input type="text" name="school" class="form-control"><br>
+              <input type="text" name="school" class="form-control" value="{{data.school.name}}"><br>
               Major:<br>
-              <input type="text" name="major" class="form-control"><br>
+              <input type="text" name="major" class="form-control" value="{{data.major}}"><br>
               Graduation Date:<br>
-              <input type="date" name="gradDate" class="form-control"><br>
+              <input type="date" name="graduation" class="form-control" value={{data.graduation}}><br>
               Shirt Size:<br>
-              <select name="shirtSize" class="form-control">
+              <select name="shirt_size" class="form-control">
                 <option disabled selected value> -- Select an option -- </option>
                 <option value="xSmall">Extra Small</option>
                 <option value="small">Small</option>
@@ -141,29 +141,30 @@
                 <option value="xLarge">Extra Large</option>
               </select><br>
               Dietary Restrictions:<br>
-              <select name="dietaryRestrictions" class="form-control">
-                <option value="none">None</option>
-                <option value="vegetarian">vegetarian</option>
-                <option value="vegan">Vegan</option>
-                <option value="glutenFree">GlutenFree</option>
-                <option value="other">Other</option>
+              <select name="dietary_restrictions" class="form-control">
+                <option value="None">None</option>
+                <option value="Vegetarian">Vegetarian</option>
+                <option value="Vegan">Vegan</option>
+                <option value="Gluten Free">Gluten Free</option>
+                <option value="Other">Other</option>
               </select>
               Special Needs:<br>
-              <input type="text" name="specialNeeds" class="form-control"><br>
+              <input type="text" name="special_needs" class="form-control" value="{{special_needs}}"><br>
               Phone Number:<br>
-              <input type="number" name="phoneNumber" class="form-control"><br>
+              <input type="number" name="phone_number" class="form-control" value="{{phone_number}}"><br>
               Would you like to recieve SMS notifications about Profhacks?<br>
-              <input type="radio" name="smsNotifications" value="yes">&nbsp; Yes &nbsp; &nbsp;
-              <input type="radio" name="smsNotifications" value="no">&nbsp; No <br>
+              <input type="radio" name="sms_notifications" value="yes">&nbsp; Yes &nbsp; &nbsp;
+              <input type="radio" name="sms_notifications" value="no">&nbsp; No <br>
               Is this your first hackathon?<br>
-              <input type="radio" name="firstHackathon" value="yes">&nbsp; Yes &nbsp; &nbsp;
-              <input type="radio" name="firstHackathon" value="no">&nbsp; No
+              <input type="radio" name="first_hackathon" value="yes">&nbsp; Yes &nbsp; &nbsp;
+              <input type="radio" name="first_hackathon" value="no">&nbsp; No
               <br>
             </div>
           </form>
         </div>
       </div>
     </section>
+
     <!-- jQuery -->
     <script src="vendor/jquery/jquery.min.js"></script>
 
@@ -179,5 +180,9 @@
 
     <!-- Theme JavaScript -->
     <script src="js/freelancer.min.js"></script>
+
+    <!-- AngularJS -->
+    <script src="vendor/angular/angular.min.js"></script>
+    <script src="js/controller.js"></script>
   </body>
 </html>
