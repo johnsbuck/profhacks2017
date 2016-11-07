@@ -67,6 +67,9 @@ gulp.task('copy', function() {
             '!node_modules/font-awesome/*.json'
         ])
         .pipe(gulp.dest('public/vendor/font-awesome'))
+
+    gulp.src(['node_modules/angular/angular.js', 'node_modules/angular/angular.min.js'])
+        .pipe(gulp.dest('public/vendor/angular'))
 })
 
 // Run everything

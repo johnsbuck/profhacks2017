@@ -9,6 +9,7 @@
     "postinstall": "gulp default"
   },
   "dependencies": {
+    "angular": "^1.5.8",
     "body-parser": "~1.15.1",
     "bootstrap": "^3.3.7",
     "browser-sync": "^2.13.0",
