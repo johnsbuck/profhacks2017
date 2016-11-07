@@ -81,6 +81,12 @@
         #title{
           text-align: center;
         }
+        #submit-button{
+          margin-top: 10px;
+          margin-bottom: 10px;
+          margin-right: 15px;
+          float: right;
+        }
       </style>
 
   </head>
@@ -94,7 +100,7 @@
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand" href="index.html">ProfHacks 2017</a>
+                <a class="navbar-brand" href="index.html">ProfHacks</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -168,7 +174,8 @@
               Is this your first hackathon?<br>
               <input type="radio" name="first_hackathon" value="yes">&nbsp; Yes &nbsp; &nbsp;
               <input type="radio" name="first_hackathon" value="no">&nbsp; No
-              <br>
+              <br />
+              <button id='submit-button' type="submit" class="btn btn-success btn-lg">Submit</button>
             </div>
           </form>
         </div>

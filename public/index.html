@@ -1,3 +1,6 @@
+<!--Disregard redundancy; this will be fixed. <br/>'s and other nonsense is for
+testing purposes-->
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -39,7 +42,6 @@
   			border-color:#898989;
   		}
   		header {
-        padding-top: 10px;
         padding-bottom: 60px;
         background: url('img/pattern.png') no-repeat center center fixed;
   			background-color:#898989;
@@ -53,20 +55,30 @@
               -o-background-size: cover;
               background-size: cover;
         background-size: 800px 1200px;
+        margin-bottom: 60px;
       }
 
   		#about.success {
   			background-color:#898989;
   		}
-  		hr.star-light::after {
-  			background-color:#898989;
-  		}
+  		hr.star-light:after {
+        background: transparent;
+      }
+      hr.star-primary:after {
+        background: transparent;
+      }
   		.footer .footer-above {
   			background-color:#898989;
   		}
   		.footer .footer-below {
   			background-color:#6E6D6C;
   		}
+      #about{
+        text-align: center;
+      }
+      #FAQ{
+        text-align: center;
+      }
     </style>
   </head>
 
@@ -80,7 +92,7 @@
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand" href="#page-top">ProfHacks 2017</a>
+                <a class="navbar-brand" href="#page-top">ProfHacks</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -94,6 +106,9 @@
                     </li>
                     <li class="page-scroll">
                         <a href="#sponsors">Sponsors</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#FAQ">FAQ</a>
                     </li>
                     <li class="page-scroll">
                         <a href="#contact">Contact</a>
@@ -138,15 +153,21 @@
                 </div>
             </div>
             <div class="row">
+              <br />
+              <br />
                 <div class="col-lg-4 col-lg-offset-2">
-                    <p>[info needed]</p>
+                    <h3>header</h3>
+                    <p>["Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."]</p>
                 </div>
                 <div class="col-lg-4">
-                    <p>[info needed]</p>
+                    <h3>header</h3>
+                    <p>["Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."]</p>
                 </div>
                 <div class="col-lg-8 col-lg-offset-2 text-center">
+                  <br />
+                  <br />
                     <a href="#" class="btn btn-lg btn-outline">
-                        <i class="fa fa-download"></i> [info needed]
+                        <i class="fa fa-download"></i> [button]
                     </a>
                 </div>
             </div>
@@ -163,6 +184,8 @@
                 </div>
             </div>
             <div class="row">
+              <br />
+              <br />
                 <div class="col-sm-4 sponsors-item">
                     <a href="#sponsorsModal1" class="sponsors-link" data-toggle="modal">
                         <div class="caption">
@@ -226,6 +249,34 @@
             </div>
         </div>
     </section>
+
+        <!-- About Section -->
+        <section class="success" id="FAQ">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <h2>FAQ</h2>
+                        <hr class="star-light">
+                    </div>
+                </div>
+                <div class="row">
+                  <br />
+                  <br />
+                  <div class="col-lg-4"></div>
+                    <div class="col-lg-4">
+                        <h3>header</h3>
+                        <p>["Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."]</p>
+                    </div>
+                    <div class="col-lg-8 col-lg-offset-2 text-center">
+                      <br />
+                      <br />
+                        <a href="#" class="btn btn-lg btn-outline">
+                            <i class="fa fa-download"></i> [button]
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
 
     <!-- Contact Section -->
     <section id="contact">
