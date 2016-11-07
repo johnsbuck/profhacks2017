@@ -9,16 +9,16 @@
 var app = angular.module('profhacks', []);
 
 app.controller('formCtrl', function($scope, $http) {
-  var token = window.location.hash.split('=')[1];
+  var token = window.location.search.split('=')[1].replace(/%22/gi, '');
+  console.log(token);
   $scope.update = function(data) {
     $scope.data = angular.copy(data);
   }
   $http.put('/mlh/user', {"token": token}).
     success(function(data) {
-      $scope.update(data.data)
+      $scope.update(data.data);
     }).error(function(data) {
+      window.location.href='/';
       console.log(data);
-    }).then(function() {
-      console.log($scope);
     });
 });
