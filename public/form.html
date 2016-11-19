@@ -32,6 +32,7 @@
       <style>
         body{
             background-color: #d8d8d8;
+			overflow-x:scroll;
         }
         .navbar-custom {
     			background-color:#ffffb2;
@@ -123,66 +124,7 @@
       <br />
       <br />
       <br />
-      <div id='formwrapper'>
-        <div id="prof-form" class="col-lg-4">
-          <h1 id="title">Profhacks Registration</h1>
-        <br />
-        <br />
-          <form ng-controller="formCtrl" name="regForm" class="regForm">
-            <div class="form-group">
-              First Name:<br>
-              <input type="text" name="first_name" class="form-control" value="{{data.first_name}}"><br>
-              Last Name:<br>
-              <input type="text" name="last_name" class="form-control" value="{{data.last_name}}"><br>
-              Date of Birth:<br>
-              <input type="date" name="date_of_birth" class="form-control" value="{{data.date_of_birth}}"><br>
-              Gender:<br>
-              <select name="gender" class="form-control">
-                <option disabled selected value> -- Select an option -- </option>
-                <option value="male">Male</option>
-                <option value="female">Female</option>
-                <option value="other">Other</option>
-              </select>
-              School:<br>
-              <input type="text" name="school" class="form-control" value="{{data.school.name}}"><br>
-              Major:<br>
-              <input type="text" name="major" class="form-control" value="{{data.major}}"><br>
-              Graduation Date:<br>
-              <input type="date" name="graduation" class="form-control" value={{data.graduation}}><br>
-              Shirt Size:<br>
-              <select name="shirt_size" class="form-control">
-                <option disabled selected value> -- Select an option -- </option>
-                <option value="xSmall">Extra Small</option>
-                <option value="small">Small</option>
-                <option value="medium">Medium</option>
-                <option value="large">Large</option>
-                <option value="xLarge">Extra Large</option>
-              </select><br>
-              Dietary Restrictions:<br>
-              <select name="dietary_restrictions" class="form-control">
-                <option value="None">None</option>
-                <option value="Vegetarian">Vegetarian</option>
-                <option value="Vegan">Vegan</option>
-                <option value="Gluten Free">Gluten Free</option>
-                <option value="Other">Other</option>
-              </select>
-              Special Needs:<br>
-              <input type="text" name="special_needs" class="form-control" value="{{special_needs}}"><br>
-              Phone Number:<br>
-              <input type="number" name="phone_number" class="form-control" value="{{phone_number}}"><br>
-              Would you like to recieve SMS notifications about Profhacks?<br>
-              <input type="radio" name="sms_notifications" value="yes">&nbsp; Yes &nbsp; &nbsp;
-              <input type="radio" name="sms_notifications" value="no">&nbsp; No <br>
-              Is this your first hackathon?<br>
-              <input type="radio" name="first_hackathon" value="yes">&nbsp; Yes &nbsp; &nbsp;
-              <input type="radio" name="first_hackathon" value="no">&nbsp; No
-              <br />
-              <button id='submit-button' type="submit" class="btn btn-success btn-lg">Submit</button>
-            </div>
-          </form>
-        </div>
-      </div>
-        <div id="owl"  class="col-lg-4">
+	  <div id="owl"  class="col-lg-4">
           <div>
             <img src="img/logo-color-poly.svg" />
           </div>
@@ -195,6 +137,96 @@
             <p>["Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."]</p>
             <br />
             <br />
+      </div>
+      <div id='formwrapper'>
+        <div id="prof-form" class="col-lg-4">
+          <h1 id="title">Profhacks Registration</h1>
+		  <br />
+		  <br />
+          <form ng-controller="formCtrl" name="regForm" class="regForm">
+            <div class="form-group">
+              <label for="first-name">First Name:</label>
+              <input type="text" name="first_name" class="form-control" value="{{data.first_name}}">
+			</div>
+			<div class="form-group">
+              <label for="last-name">Last Name:</label>
+              <input type="text" name="last_name" class="form-control" value="{{data.last_name}}">
+			</div>
+			<div class="form-group">
+              <label for="date-of-birth">Date of Birth:</label>
+              <input type="date" name="date_of_birth" class="form-control" value="{{data.date_of_birth}}">
+			</div>
+			<div class="form-group">
+              <label for="gender">Gender:</label>
+              <select name="gender" class="form-control">
+                <option disabled selected value> -- Select an option -- </option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+              </select>
+			</div>
+			<div class="form-group">
+              <label for="school">School:</label>
+              <input type="text" name="school" class="form-control" value="{{data.school.name}}">
+			</div>
+			<div class="form-group">
+              <label for="major">Major:</label>
+              <input type="text" name="major" class="form-control" value="{{data.major}}">
+			</div>
+            <div class="form-group">
+              <label for="graduation-date">Graduation Date:</label>
+              <input type="date" name="graduation" class="form-control" value={{data.graduation}}>
+			</div>
+            <div class="form-group">
+              <label for="shirt-size">Shirt Size:</label>
+              <select name="shirt_size" class="form-control">
+                <option disabled selected value> -- Select an option -- </option>
+                <option value="xSmall">Extra Small</option>
+                <option value="small">Small</option>
+                <option value="medium">Medium</option>
+                <option value="large">Large</option>
+                <option value="xLarge">Extra Large</option>
+              </select>
+			</div>
+            <div class="form-group">
+              <label for="dietary-restrictions">Dietary Restrictions:</label>
+              <select name="dietary_restrictions" class="form-control">
+                <option value="None">None</option>
+                <option value="Vegetarian">Vegetarian</option>
+                <option value="Vegan">Vegan</option>
+                <option value="Gluten Free">Gluten Free</option>
+                <option value="Other">Other</option>
+              </select>
+			</div>
+            <div class="form-group">
+              <label for="special-needs">Special Needs:</label>
+              <input type="text" name="special_needs" class="form-control" value="{{special_needs}}">
+			</div>
+            <div class="form-group">
+              <label for="phone-number">Phone Number:</label>
+              <input type="number" name="phone_number" class="form-control" value="{{phone_number}}">
+			</div>
+            <div class="form-group">
+              <label for="travel-reimbursement">Do you need travel reimbursement? If so, explain your travel expenses/mileage:</label>
+			  <textarea rows="10" cols="71"></textarea>
+			</div>
+			<div class="form-group">
+              <label for="resume">Would you like to upload you resume?</label>
+			  <input type="file">
+			</div>
+			<div class="form-group">
+              <label for="SMS-notifications">Would you like to recieve SMS notifications about Profhacks?</label>
+              <input type="radio" name="sms_notifications" value="yes">&nbsp; Yes &nbsp; &nbsp;
+              <input type="radio" name="sms_notifications" value="no">&nbsp; No
+			</div>
+            <div class="form-group">
+              <label for="first-hackathon">Is this your first hackathon?
+              <input type="radio" name="first_hackathon" value="yes">&nbsp; Yes &nbsp; &nbsp;
+              <input type="radio" name="first_hackathon" value="no">&nbsp; No
+            </div>
+            <button id='submit-button' type="submit" class="btn btn-success btn-lg">Submit</button>
+          </form>
+        </div>
       </div>
     </div>
     </section>
