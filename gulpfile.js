@@ -70,6 +70,9 @@ gulp.task('copy', function() {
 
     gulp.src(['node_modules/angular/angular.js', 'node_modules/angular/angular.min.js'])
         .pipe(gulp.dest('public/vendor/angular'))
+
+    gulp.src(['node_modules/blob-util/dist/blob-util.js', 'node_modules/blob-util/dist/blob-util.min.js'])
+        .pipe(gulp.dest('public/vendor/blob-util'))
 })
 
 // Run everything

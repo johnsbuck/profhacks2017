@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "angular": "^1.5.8",
+    "blob-util": "^1.2.1",
     "body-parser": "~1.15.1",
     "bootstrap": "^3.3.7",
     "browser-sync": "^2.13.0",

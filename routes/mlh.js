@@ -6,7 +6,7 @@ var router  = express.Router();
 
 var mlhAuth = new ClientOAuth2({
   clientId: "fc30a89abaa8a953a070443edcb5317c3d7d27c0866104a60420e687f4f75cce",
-  clientSecret: process.env.SECRET_KEY || "b5e5223a4d18ddca1c8a914a70f10e0d56bc35757c0ab0e7142e743887724e57",
+  clientSecret: process.env.SECRET_KEY,
   accessTokenUri: "https://my.mlh.io/oauth/token",
   authorizationUri: "https://my.mlh.io/oauth/authorize",
   redirectUri: "http://localhost:3000/mlh/callback",
@@ -63,7 +63,19 @@ router.put('/user', function(req, res, next) {
       } else {
         res.status(200).send(body).end();
       }
-      res.end();
+    });
+});
+
+router.get('/valid', function(req, res, next) {
+  var token = req.body.token;
+  request.get('https://my.mlh.io/api/v2/user.json?access_token=' + req.body.token,
+    function(err, response, body) {
+      if (err || response.statusCode !== 200) {
+        console.log('Error:' + err + "\n" + JSON.stringify(response));
+        res.status(402).send(response).end();
+      } else {
+        res.status(200).end();
+      }
     });
 });
 

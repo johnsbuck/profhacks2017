@@ -1,309 +1,330 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="profhacks">
 
-  <head>
+<head>
 
-      <meta charset="utf-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <meta name="description" content="">
-      <meta name="author" content="">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
 
-      <title>Registration Form</title>
+  <title>Registration Form</title>
 
-      <!-- Bootstrap Core CSS -->
-      <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-      <!-- Theme CSS -->
-      <link href="css/freelancer.min.css" rel="stylesheet">
+  <!-- Theme CSS -->
+  <link href="css/freelancer.min.css" rel="stylesheet">
 
-      <!-- Custom Fonts -->
-      <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-      <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-      <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+  <!-- Custom Fonts -->
+  <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
 
-      <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-      <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-      <!--[if lt IE 9]>
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
           <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
           <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
       <![endif]-->
 
-      <style>
-        body{
-            background-color: #d8d8d8;
-			overflow-x:scroll;
-        }
-        .navbar-custom {
-    			background-color:#ffffb2;
-    		}
-    		.btn-lg{
-    			background-color:#898989;
-    			border-color:#898989;
-    		}
-    		header {
-          background: url('img/pattern.png') no-repeat center center fixed;
-    			background-color:#898989
-    		}
-        .logo {
-          padding: 200px;
-          background: url('img/logo-color-poly.svg') no-repeat center center;
-                -webkit-background-size: cover;
-                -moz-background-size: cover;
-                -o-background-size: cover;
-                background-size: cover;
-          background-size: 800px 1200px;
-        }
+  <style>
+    body {
+      background-color: #d8d8d8;
+      overflow-x: scroll;
+    }
 
-    		#about.success {
-    			background-color:#898989;
-    		}
-    		hr.star-light::after {
-    			background-color:#898989;
-    		}
-    		.footer .footer-above {
-    			background-color:#898989;
-    		}
-    		.footer .footer-below {
-    			background-color:#6E6D6C;
-    		}
-        #prof-form{
-          float: right;
-          margin-right: 8%;
-          margin-left: 8%;
-          background-color: #e5e5e5;
-          border-radius: 1%;
-        }
-        #owl{
-          margin: 10%;
-          margin-right: 8%;
-          margin-left: 8%;
-          margin-top: 0;
-          text-align: center;
-        }
-        #title{
-          text-align: center;
-        }
-        #submit-button{
-          margin-top: 10px;
-          margin-bottom: 10px;
-          margin-right: 15px;
-          float: right;
-        }
-      </style>
+    .navbar-custom {
+      background-color: #EBC800;
+    }
 
-  </head>
-  <body id="page-top" class="index">
+    .btn-lg {
+      background-color: #898989;
+      border-color: #898989;
+    }
 
-    <!-- Navigation -->
-    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header page-scroll">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
-                </button>
-                <a class="navbar-brand" href="index.html">ProfHacks</a>
-            </div>
+    header {
+      background: url('img/pattern.png') no-repeat center center fixed;
+      background-color: #898989
+    }
 
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="hidden">
-                        <a href="#page-top"></a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container-fluid -->
-    </nav>
-    <section>
-      <div class="row">
-      <br />
-      <br />
-      <br />
-      <br />
-	  <div id="owl"  class="col-lg-4">
-          <div>
-            <img src="img/logo-color-poly.svg" />
-          </div>
-            <h3>Header</h3>
-            <br />
-            <br />
-            <p>["Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."]</p>
-            <br />
-            <br />
-            <p>["Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."]</p>
-            <br />
-            <br />
+    .logo {
+      padding: 200px;
+      background: url('img/logo-color-poly.svg') no-repeat center center;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      background-size: 800px 1200px;
+    }
+
+    #about.success {
+      background-color: #898989;
+    }
+
+    hr.star-light::after {
+      background-color: #898989;
+    }
+
+    .footer .footer-above {
+      background-color: #898989;
+    }
+
+    .footer .footer-below {
+      background-color: #6E6D6C;
+    }
+
+    #prof-form {
+      float: center;
+      margin-left: 8%;
+      margin-right: 8%;
+      margin-top: 4%;
+      margin-bottom: 4%;
+      padding: 2%;
+      background-color: #e5e5e5;
+      border-radius: 1%;
+    }
+
+    #owl {
+      margin: 10%;
+      margin-right: 8%;
+      margin-left: 8%;
+      margin-top: 0;
+      text-align: center;
+    }
+
+    #title {
+      text-align: center;
+    }
+
+    #submit-button {
+      margin-top: 10px;
+      margin-bottom: 10px;
+      margin-right: 15px;
+      float: right;
+    }
+  </style>
+
+</head>
+
+<body id="page-top" class="index">
+
+  <!-- Navigation -->
+  <nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom">
+    <div class="container">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header page-scroll">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+        </button>
+        <a class="navbar-brand" href="index.html">ProfHacks</a>
       </div>
-      <div id='formwrapper'>
-        <div id="prof-form" class="col-lg-4">
-          <h1 id="title">Profhacks Registration</h1>
-		  <br />
-		  <br />
-          <form ng-controller="formCtrl" name="regForm" class="regForm">
-            <div class="form-group">
-              <label for="first-name">First Name:</label>
-              <input type="text" name="first_name" class="form-control" value="{{data.first_name}}">
-			</div>
-			<div class="form-group">
-              <label for="last-name">Last Name:</label>
-              <input type="text" name="last_name" class="form-control" value="{{data.last_name}}">
-			</div>
-			<div class="form-group">
-              <label for="date-of-birth">Date of Birth:</label>
-              <input type="date" name="date_of_birth" class="form-control" value="{{data.date_of_birth}}">
-			</div>
-			<div class="form-group">
-              <label for="gender">Gender:</label>
-              <select name="gender" class="form-control">
-                <option disabled selected value> -- Select an option -- </option>
-                <option value="male">Male</option>
-                <option value="female">Female</option>
-                <option value="other">Other</option>
-              </select>
-			</div>
-			<div class="form-group">
-              <label for="school">School:</label>
-              <input type="text" name="school" class="form-control" value="{{data.school.name}}">
-			</div>
-			<div class="form-group">
-              <label for="major">Major:</label>
-              <input type="text" name="major" class="form-control" value="{{data.major}}">
-			</div>
-            <div class="form-group">
-              <label for="graduation-date">Graduation Date:</label>
-              <input type="date" name="graduation" class="form-control" value={{data.graduation}}>
-			</div>
-            <div class="form-group">
-              <label for="shirt-size">Shirt Size:</label>
-              <select name="shirt_size" class="form-control">
-                <option disabled selected value> -- Select an option -- </option>
-                <option value="xSmall">Extra Small</option>
-                <option value="small">Small</option>
-                <option value="medium">Medium</option>
-                <option value="large">Large</option>
-                <option value="xLarge">Extra Large</option>
-              </select>
-			</div>
-            <div class="form-group">
-              <label for="dietary-restrictions">Dietary Restrictions:</label>
-              <select name="dietary_restrictions" class="form-control">
-                <option value="None">None</option>
-                <option value="Vegetarian">Vegetarian</option>
-                <option value="Vegan">Vegan</option>
-                <option value="Gluten Free">Gluten Free</option>
-                <option value="Other">Other</option>
-              </select>
-			</div>
-            <div class="form-group">
-              <label for="special-needs">Special Needs:</label>
-              <input type="text" name="special_needs" class="form-control" value="{{special_needs}}">
-			</div>
-            <div class="form-group">
-              <label for="phone-number">Phone Number:</label>
-              <input type="number" name="phone_number" class="form-control" value="{{phone_number}}">
-			</div>
-            <div class="form-group">
-              <label for="travel-reimbursement">Do you need travel reimbursement? If so, explain your travel expenses/mileage:</label>
-			  <textarea rows="10" cols="71"></textarea>
-			</div>
-			<div class="form-group">
-              <label for="resume">Would you like to upload you resume?</label>
-			  <input type="file">
-			</div>
-			<div class="form-group">
-              <label for="SMS-notifications">Would you like to recieve SMS notifications about Profhacks?</label>
-              <input type="radio" name="sms_notifications" value="yes">&nbsp; Yes &nbsp; &nbsp;
-              <input type="radio" name="sms_notifications" value="no">&nbsp; No
-			</div>
-            <div class="form-group">
-              <label for="first-hackathon">Is this your first hackathon?
-              <input type="radio" name="first_hackathon" value="yes">&nbsp; Yes &nbsp; &nbsp;
-              <input type="radio" name="first_hackathon" value="no">&nbsp; No
-            </div>
-            <button id='submit-button' type="submit" class="btn btn-success btn-lg">Submit</button>
-          </form>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="hidden">
+            <a href="#page-top"></a>
+          </li>
+        </ul>
+      </div>
+      <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+  </nav>
+  <section>
+    <div class="modal fade" id="errorModal">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <h4 class="modal-title">Error</h4>
+          </div>
+          <div class="modal-body">
+          </div>
+        </div>
+        <!-- /.modal-content -->
+      </div>
+      <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
+
+    <div class="row">
+      <div id="prof-form">
+        <h1 id="title">Profhacks Registration</h1>
+        <br />
+        <br />
+        <form ng-controller="formCtrl" name="regForm" class="regForm" ng-submit="submit(data)">
+          <div class="form-group">
+            <label for="first-name">First Name:</label>
+            <input type="text" ng-model="data.first_name" name="first_name" class="form-control" value="{{data.first_name}}">
+          </div>
+          <div class="form-group">
+            <label for="last-name">Last Name:</label>
+            <input type="text" ng-model="data.last_name" name="last_name" class="form-control" value="{{data.last_name}}">
+          </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="text" ng-model="data.email" name="email" class="form-control" value="{{data.email}}">
+          </div>
+          <div class="form-group">
+            <label for="date_of_birth">Date of Birth:</label>
+            <input type="text" ng-model="data.date_of_birth" name="date_of_birth" class="form-control" value="{{data.date_of_birth}}">
+          </div>
+          <div class="form-group">
+            <label for="gender">Gender:</label>
+            <select ng-model="data.gender" name="gender" class="form-control">
+              <option disabled selected value> -- Select an option -- </option>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="school">School:</label>
+            <input type="text" ng-model="data.school" name="school" class="form-control" value="{{data.school.name}}">
+          </div>
+          <div class="form-group">
+            <label for="major">Major:</label>
+            <input type="text" ng-model="data.major" name="major" class="form-control" value="{{data.major}}">
+          </div>
+          <div class="form-group">
+            <label for="graduation-date">Graduation Date:</label>
+            <input type="text" ng-model="data.graduation" name="graduation" class="form-control" value={{data.graduation}}>
+          </div>
+          <div class="form-group">
+            <label for="shirt-size">Shirt Size:</label>
+            <select name="shirt_size" ng-model="data.shirt_size" class="form-control">
+              <option disabled selected value> -- Select an option -- </option>
+              <option value="x-small">Extra Small</option>
+              <option value="small">Small</option>
+              <option value="medium">Medium</option>
+              <option value="large">Large</option>
+              <option value="x-large">Extra Large</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="dietary-restrictions">Dietary Restrictions:</label>
+            <select name="dietary_restrictions" ng-model="data.diet" class="form-control">
+              <option value="none">None</option>
+              <option value="vegetarian">Vegetarian</option>
+              <option value="vegan">Vegan</option>
+              <option value="gluten-free">Gluten Free</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="special-needs">Special Needs:</label>
+            <input type="text" name="special_needs" ng-model="data.special_needs" class="form-control" value="{{special_needs}}">
+          </div>
+          <div class="form-group">
+            <label for="first-hackathon">Is this your first hackathon?</label>
+              <input type="radio" ng-model="data.first_hack" name="first_hackathon" value=true>&nbsp; Yes &nbsp; &nbsp;
+              <input type="radio" ng-model="data.first_hack" name="first_hackathon" value=false>&nbsp; No
+          </div>
+          <div class="form-group">
+            <label for="phone-number">Phone Number:</label>
+            <input type="number" ng-model="data.phone" name="phone_number" class="form-control" value="{{phone_number}}">
+          </div>
+          <div class="form-group">
+            <label for="travel">Do you need travel reimbursement? If so, explain your travel expenses/mileage:</label>
+            <textarea rows="10" cols="71" ng-model="data.travel" name="travel" class="form-control"></textarea>
+          </div>
+          <div class="form-group">
+            <label for="resume">Would you like to upload you resume?</label>
+            <input type="file" ng-model="data.resume" id="file">
+          </div>
+          <div class="form-group">
+            <label for="SMS-notifications">Would you like to recieve SMS notifications about Profhacks?</label>
+            <input type="radio" ng-model="data.sms_notify" name="sms_notifications" value=true>&nbsp; Yes &nbsp; &nbsp;
+            <input type="radio" ng-model="data.sms_notify" name="sms_notifications" value=false>&nbsp; No
+          </div>
+          <input id='submit' type="submit" class="btn btn-success btn-lg" value="Submit"/>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center">
+    <div class="footer-above">
+      <div class="container">
+        <div class="row">
+          <div class="footer-col col-md-4">
+            <h3>Location</h3>
+            <p>[address needed]
+              <br>Glassboro, NJ 08028</p>
+          </div>
+          <div class="footer-col col-md-4">
+            <h3>[info needed]</h3>
+            <ul class="list-inline">
+              <li>
+                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a>
+              </li>
+              <li>
+                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-google-plus"></i></a>
+              </li>
+              <li>
+                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-twitter"></i></a>
+              </li>
+              <li>
+                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-linkedin"></i></a>
+              </li>
+              <li>
+                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-dribbble"></i></a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-col col-md-4">
+            <h3>[info needed]</h3>
+            <p>[info needed]</a>.</p>
+          </div>
         </div>
       </div>
     </div>
-    </section>
-
-        <!-- Footer -->
-        <footer class="text-center">
-            <div class="footer-above">
-                <div class="container">
-                    <div class="row">
-                        <div class="footer-col col-md-4">
-                            <h3>Location</h3>
-                            <p>[address needed]
-                                <br>Glassboro, NJ 08028</p>
-                        </div>
-                        <div class="footer-col col-md-4">
-                            <h3>[info needed]</h3>
-                            <ul class="list-inline">
-                                <li>
-                                    <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a>
-                                </li>
-                                <li>
-                                    <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-google-plus"></i></a>
-                                </li>
-                                <li>
-                                    <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-twitter"></i></a>
-                                </li>
-                                <li>
-                                    <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-linkedin"></i></a>
-                                </li>
-                                <li>
-                                    <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-dribbble"></i></a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="footer-col col-md-4">
-                            <h3>[info needed]</h3>
-                            <p>[info needed]</a>.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-below">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-12">
-                            Copyright &copy; Profhacks 2017
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
-
-        <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
-        <div class="scroll-top page-scroll hidden-sm hidden-xs hidden-lg hidden-md">
-            <a class="btn btn-primary" href="#page-top">
-                <i class="fa fa-chevron-up"></i>
-            </a>
+    <div class="footer-below">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            Copyright &copy; Profhacks 2017
+          </div>
         </div>
+      </div>
+    </div>
+  </footer>
 
-    <!-- jQuery -->
-    <script src="vendor/jquery/jquery.min.js"></script>
+  <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+  <div class="scroll-top page-scroll hidden-sm hidden-xs hidden-lg hidden-md">
+    <a class="btn btn-primary" href="#page-top">
+      <i class="fa fa-chevron-up"></i>
+    </a>
+  </div>
 
-    <!-- Bootstrap Core JavaScript -->
-    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+  <!-- jQuery -->
+  <script src="vendor/jquery/jquery.min.js"></script>
 
-    <!-- Plugin JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+  <!-- Bootstrap Core JavaScript -->
+  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
 
-    <!-- Contact Form JavaScript -->
-    <script src="js/jqBootstrapValidation.js"></script>
-    <script src="js/contact_me.js"></script>
+  <!-- Plugin JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
 
-    <!-- Theme JavaScript -->
-    <script src="js/freelancer.min.js"></script>
+  <!-- Contact Form JavaScript -->
+  <script src="js/jqBootstrapValidation.js"></script>
+  <script src="js/contact_me.js"></script>
 
-    <!-- AngularJS -->
-    <script src="vendor/angular/angular.min.js"></script>
-    <script src="js/controller.js"></script>
-  </body>
+  <!-- Theme JavaScript -->
+  <script src="js/freelancer.min.js"></script>
+
+  <!-- Blob-Util -->
+  <script src="vendor/blob-util/blob-util.min.js"></script>
+
+  <!-- AngularJS -->
+  <script src="vendor/angular/angular.min.js"></script>
+  <script src="js/controller.js"></script>
+</body>
+
 </html>

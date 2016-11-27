@@ -58,11 +58,11 @@ hr.star-light:after {
   color: white;
 }
 hr.star-primary {
-  border-color: #E6C200;
+  border-color: #EBC800;
 }
 hr.star-primary:after {
   background: transparent;
-  color: #E6C200;
+  color: #EBC800;
 }
 .img-centered {
   margin: 0 auto;
@@ -105,7 +105,7 @@ header .intro-text .skills {
   }
 }
 .navbar-custom {
-  background: #E6C200;
+  background: #EBC800;
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   font-weight: 700;
@@ -305,14 +305,14 @@ footer h3 {
 }
 footer .footer-above {
   padding-top: 50px;
-  background-color: #E6C200;
+  background-color: #EBC800;
 }
 footer .footer-col {
   margin-bottom: 50px;
 }
 footer .footer-below {
   padding: 25px 0;
-  background-color: #cdac00;
+  background-color: #d2b200;
 }
 .btn-outline {
   color: white;
@@ -348,8 +348,8 @@ footer .footer-below {
 }
 .btn-primary {
   color: white;
-  background-color: #E6C200;
-  border-color: #E6C200;
+  background-color: #EBC800;
+  border-color: #EBC800;
   font-weight: 700;
 }
 .btn-primary:hover,
@@ -358,8 +358,8 @@ footer .footer-below {
 .btn-primary.active,
 .open .dropdown-toggle.btn-primary {
   color: white;
-  background-color: #b39700;
-  border-color: #a98e00;
+  background-color: #b89d00;
+  border-color: #ae9400;
 }
 .btn-primary:active,
 .btn-primary.active,
@@ -381,11 +381,11 @@ fieldset[disabled] .btn-primary:active,
 .btn-primary.disabled.active,
 .btn-primary[disabled].active,
 fieldset[disabled] .btn-primary.active {
-  background-color: #E6C200;
-  border-color: #E6C200;
+  background-color: #EBC800;
+  border-color: #EBC800;
 }
 .btn-primary .badge {
-  color: #E6C200;
+  color: #EBC800;
   background-color: white;
 }
 .btn-success {
@@ -499,7 +499,7 @@ fieldset[disabled] .btn-success.active {
   height: 75px;
   width: 1px;
   margin-left: 35px;
-  background-color: #E6C200;
+  background-color: #EBC800;
   transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   /* IE 9 */
@@ -510,7 +510,7 @@ fieldset[disabled] .btn-success.active {
 .sponsors-modal .close-modal .lr .rl {
   height: 75px;
   width: 1px;
-  background-color: #E6C200;
+  background-color: #EBC800;
   transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   /* IE 9 */

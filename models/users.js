@@ -3,23 +3,24 @@
 module.exports = function(sequelize, DataTypes) {
   var Users = sequelize.define('Users', {
     //MLH Data
-    first_name: DataTypes.STRING,
-    last_name: DataTypes.STRING,
-    graduation: DataTypes.DATE,
-    major: DataTypes.STRING,
-    shirt_size: DataTypes.STRING,
-    dietary_restrictions: DataTypes.STRING,
+    id: {type: DataTypes.INTEGER, primaryKey: true},
+    first_name: {type: DataTypes.STRING, notNull: true},
+    last_name: {type: DataTypes.STRING, notNull: true},
+    graduation: {type: DataTypes.DATE, notNull: true},
+    major: {type: DataTypes.STRING, notNull: true},
+    shirt_size: {type: DataTypes.STRING, notNull: true},
+    date_of_birth: {type: DataTypes.DATE, notNull: true},
+    diet: DataTypes.STRING,
     special_needs: DataTypes.STRING,
-    date_of_birth: DataTypes.DATE,
     gender: DataTypes.STRING,
-    phone_number: DataTypes.INTEGER,
+    phone: DataTypes.STRING,
     school: DataTypes.STRING,
 
     //Custom Data
     resume: DataTypes.BLOB,
-    teamates: DataTypes.STRING,
-    first_hackathon: DataTypes.BOOLEAN,
-    sms_notifications: DataTypes.BOOLEAN,
+    //teamates: DataTypes.STRING,
+    first_hack: DataTypes.BOOLEAN,
+    sms_notify: DataTypes.BOOLEAN,
 
     //Internal
     status: {type: DataTypes.STRING, defaultValue: 'pending'},
