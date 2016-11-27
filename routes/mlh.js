@@ -42,7 +42,7 @@ router.get('/callback', function(req,res,next) {
       })
 
       // We should store the token into a database.
-      request.put({url: 'http://localhost:3000/mlh/user', form: {token: user.accessToken}}, function(err, response, body) {
+      request.put({url: 'http://gentle-retreat-46056.herokuapp.com/mlh/user', form: {token: user.accessToken}}, function(err, response, body) {
         if(err || response.statusCode !== 200) {
           res.redirect('/');
         } else {
