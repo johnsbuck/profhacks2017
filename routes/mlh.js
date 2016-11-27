@@ -9,7 +9,7 @@ var mlhAuth = new ClientOAuth2({
   clientSecret: process.env.SECRET_KEY,
   accessTokenUri: "https://my.mlh.io/oauth/token",
   authorizationUri: "https://my.mlh.io/oauth/authorize",
-  redirectUri: "http://localhost:3000/mlh/callback",
+  redirectUri: "gentle-retreat-46056.herokuapp.com/mlh/callback",
   scopes: ['email','education','birthday']
 });
 
