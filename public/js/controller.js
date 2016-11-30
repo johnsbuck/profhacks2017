@@ -85,7 +85,8 @@ app.controller('formCtrl', function($scope, $http) {
         window.location = '/thanks.html';
       }).error(function(err) {
         var errorBody = $($("#errorModal")[0]).find(".modal-body")[0];
-        errorBody = "Already Registered";
+        errorBody.innerHTML = "Already Registered";
+        $("#errorModal").modal("toggle");
         console.log(err);
       });
   }
