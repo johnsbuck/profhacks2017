@@ -59,30 +59,34 @@ app.controller('formCtrl', function($scope, $http) {
 
     data.phone = convertPhoneNumber(data.phone);
 
-    var r = new FileReader();
-    r.onloadend = function(e){
-      data.resume = e.target.result;
+    var body = {data: data};
+    body.token = token;
 
-      console.log("Test");
-      console.log(data);
-
-      blobUtil.arrayBufferToBlob(e.target.result, "application/pdf").then(function (blob) {
-        data.resume = blob;
-        console.log(data);
-        userSubmission(data);
-      });
+    if (fileType !== "null") {
+      var r = new FileReader();
+      r.onloadend = function(e){
+        blobUtil.arrayBufferToBlob(e.target.result, "application/pdf").then(function (blob) {
+          body.data.resume = blob;
+          console.log(body);
+          userSubmission(body);
+        });
+      }
+      r.readAsArrayBuffer(f);
+    } else {
+      console.log(body);
+      userSubmission(body);
     }
-    r.readAsArrayBuffer(f);
 
   }
 
   function userSubmission(data) {
     $http.put('/user/create', data).
-      success(function(data) {
+      success(function(response) {
         window.location = '/thanks.html';
-      }).error(function(data) {
-        console.log("INVALID");
-        console.log(data);
+      }).error(function(err) {
+        var errorBody = $($("#errorModal")[0]).find(".modal-body")[0];
+        errorBody = "Already Registered";
+        console.log(err);
       });
   }
 });
