@@ -22,33 +22,18 @@ $(function() {
                 firstName = name.split(' ').slice(0, -1).join(' ');
             }
 
+
             $.ajax({
-                url: "https://api.sendgrid.com/v3/mail/send",
-                type: "POST",
+                url: "/email",
+                method: "PUT",
                 data: {
-                  "personalizations": [
-                    {
-                      "to" : [
-                        {
-                          "email": "bucknamj8@students.rowan.edu"
-                        }
-                      ],
-                      "subject": "ProfHacks 2017 Contact Form"
-                    }
-                  ],
-                  "from": {
-                    "name": name,
-                    "email": email
-                  },
-                  "content": [
-                    {
-                      "type": "text/plain",
-                      "value": message
-                    }
-                  ]
+                    name: name,
+                    phone: phone,
+                    email: email,
+                    message: message
                 },
                 cache: false,
-                success: function() {
+                success: function(response) {
                     // Enable button & show success message
                     $("#btnSubmit").attr("disabled", false);
                     $('#success').html("<div class='alert alert-success'>");
@@ -62,8 +47,9 @@ $(function() {
                     //clear all fields
                     $('#contactForm').trigger("reset");
                 },
-                error: function() {
+                error: function(error) {
                     // Fail message
+                    console.log(error);
                     $('#success').html("<div class='alert alert-danger'>");
                     $('#success > .alert-danger').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
                         .append("</button>");
