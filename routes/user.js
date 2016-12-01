@@ -9,9 +9,7 @@ router.put('/create', function(req, res, next) {
   request.get('https://my.mlh.io/api/v2/user.json?access_token=' + req.body.token,
     function(err, response, body) {
       if (err || response.statusCode !== 200) {
-        console.log(response +'\n' + err);
-        console.log('Error:' + err + "\n" + JSON.stringify(response));
-        res.status(302).send(response).end();
+        res.status(401).send("Invalid MLH Token (You may need re-login)").end();
       } else {
         body = JSON.parse(body);
         models["Users"].findById(body.data.id).then(function(user) {
@@ -21,7 +19,7 @@ router.put('/create', function(req, res, next) {
                 res.status(201).end();
               });
           } else {
-            res.status(302).send("Already registered");
+            res.status(401).send("Already registered").end();
           }
         });
       }

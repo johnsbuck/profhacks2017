@@ -67,13 +67,11 @@ app.controller('formCtrl', function($scope, $http) {
       r.onloadend = function(e){
         blobUtil.arrayBufferToBlob(e.target.result, "application/pdf").then(function (blob) {
           body.data.resume = blob;
-          console.log(body);
           userSubmission(body);
         });
       }
       r.readAsArrayBuffer(f);
     } else {
-      console.log(body);
       userSubmission(body);
     }
 
@@ -85,9 +83,8 @@ app.controller('formCtrl', function($scope, $http) {
         window.location = '/thanks.html';
       }).error(function(err) {
         var errorBody = $($("#errorModal")[0]).find(".modal-body")[0];
-        errorBody.innerHTML = "Already Registered";
+        errorBody.innerHTML = err;
         $("#errorModal").modal("toggle");
-        console.log(err);
       });
   }
 });
@@ -100,8 +97,6 @@ function convertPhoneNumber(number) {
   number = number.toString();
   if (number.length == 10) {
     number = number.substring(0,3) + "-" + number.substring(3,6) + "-" + number.substring(6,10)
-  } else if(number.length == 11) {
-    number = number.substring(0,1) + "-" + number.substring(1,4) + "-" + number.substring(4,7) + "-" + number.substring(7,11)
   }
 
   return number
@@ -138,6 +133,16 @@ function errorCheckForm(data) {
     errorBody.innerHTML += "<li> Invalid Graduation Date or Date Format (yyyy-MM-dd)</li>\n";
   }
 
+  if (!/^[a-zA-Z ]+$/.test(data.school)) {
+    toggle = true;
+    errorBody.innerHTML += "<li> Invalid School (Alphabetic Characters & Spaces Only)</li>\n";
+  }
+
+  if (!/^[a-zA-Z ]+$/.test(data.major)) {
+    toggle = true;
+    errorBody.innerHTML += "<li> Invalid Major (Alphabetic Characters & Spaces Only)</li>\n";
+  }
+
   if (!data.shirt_size) {
     toggle = true;
     errorBody.innerHTML += "<li> Please pick a shirt size.</li>\n";
@@ -148,7 +153,7 @@ function errorCheckForm(data) {
     errorBody.innerHTML += "<li> Please let us know if this is your first hackathon.</li>\n";
   }
 
-  if (typeof(data.phone) === "number" && (!/^\d+$/.test(data.phone) || data.phone.toString().length !== 10)) {
+  if (typeof(data.phone) === "number" && (!/^\d+$/.test(data.phone) || data.phone.toString().length !== 10 || data.phone < 0)) {
     toggle = true;
     errorBody.innerHTML += "<li> Please give us a valid phone number (XXXXXXXXXX [10 digits]).</li>\n";
   }
@@ -156,6 +161,11 @@ function errorCheckForm(data) {
   if (!!document.getElementById('file').files[0] && document.getElementById('file').files[0].type !== "application/pdf") {
     toggle = true;
     errorBody.innerHTML += "<li> Please submit a pdf for the resume.</li>\n";
+  }
+
+  if(data.sms_notify && !data.phone) {
+    toggle = true;
+    errorBody.innerHTML += "<li> Requires phone number for sms notifications.</li>\n";
   }
 
   if (toggle) {
