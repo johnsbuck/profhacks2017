@@ -9,7 +9,7 @@ var mlhAuth = new ClientOAuth2({
   clientSecret: process.env.SECRET_KEY,
   accessTokenUri: "https://my.mlh.io/oauth/token",
   authorizationUri: "https://my.mlh.io/oauth/authorize",
-  redirectUri: "https://gentle-retreat-46056.herokuapp.com/mlh/callback",
+  redirectUri: "https://profhacks2017.herokuapp.com/mlh/callback",
   scopes: ['email','education','birthday']
 });
 
@@ -42,7 +42,7 @@ router.get('/callback', function(req,res,next) {
       })
 
       // We should store the token into a database.
-      request.put({url: 'https://gentle-retreat-46056.herokuapp.com/mlh/user', form: {token: user.accessToken}}, function(err, response, body) {
+      request.put({url: 'https://profhacks2017.herokuapp.com/mlh/user', form: {token: user.accessToken}}, function(err, response, body) {
         if(err || response.statusCode !== 200) {
           res.redirect('/');
         } else {
