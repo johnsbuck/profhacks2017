@@ -15,6 +15,7 @@ module.exports = function(sequelize, DataTypes) {
     gender: DataTypes.STRING,
     phone: DataTypes.STRING,
     school: DataTypes.STRING,
+    email: DataTypes.STRING,
 
     //Custom Data
     resume: DataTypes.BLOB,
