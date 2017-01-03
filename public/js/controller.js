@@ -168,6 +168,11 @@ function errorCheckForm(data) {
     errorBody.innerHTML += "<li> Requires phone number for sms notifications.</li>\n";
   }
 
+  if(data.travel && data.travel.length > 255) {
+    toggle = true;
+    errorBody.innerHTML += "<li> Please make sure travel reimbursement message is less than 256 characters.</li>\n";
+  }
+
   if (toggle) {
       errorBody.innerHTML = "<ul>\n" + errorBody.innerHTML + "</ul>";
   }
