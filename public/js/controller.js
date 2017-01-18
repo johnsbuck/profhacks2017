@@ -102,6 +102,37 @@ function convertPhoneNumber(number) {
   return number
 }
 
+app.controller('acceptCtrl', function($scope, $http) {
+  var token = window.location.search.split('=')[1]
+
+  if (typeof(token) === 'string') {
+    token = token.replace(/%22/gi, '')
+  } else {
+    window.location = '/'
+  }
+
+  $scope.update = function(data) {
+    $scope.data = angular.copy(data)
+  }
+
+  $http.put('/mlh/user', {"token": token})
+    .error(function(data) {
+      window.location = '/'
+      console.log(data);
+    });
+
+  $scope.submit = function(data) {
+    $http.put('/user/create', data)
+      .success(function(response) {
+        window.location = '/thanks.html';
+      }).error(function(err) {
+        var errorBody = $($("#errorModal")[0]).find(".modal-body")[0];
+        errorBody.innerHTML = err;
+        $("#errorModal").modal("toggle");
+      });
+  }
+});
+
 function errorCheckForm(data) {
   var toggle = false;
   var errorBody = $($("#errorModal")[0]).find(".modal-body")[0];
