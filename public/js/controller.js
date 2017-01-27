@@ -21,7 +21,7 @@ app.controller('formCtrl', function($scope, $http) {
     $scope.data = angular.copy(data)
   }
   $http.put('/mlh/user', {"token": token}).
-    success(function(data) {
+    then(function(data) {
       if (typeof(data.data.date_of_birth) !== "string" || !validateDate(data.data.date_of_birth)) {
         data.data.date_of_birth = "yyyy-MM-dd"
       }
@@ -34,7 +34,7 @@ app.controller('formCtrl', function($scope, $http) {
       $scope.update(data.data)
 
       console.log(data)
-    }).error(function(data) {
+    }).catch(function(data) {
       window.location = '/'
       console.log(data);
     });
@@ -79,9 +79,9 @@ app.controller('formCtrl', function($scope, $http) {
 
   function userSubmission(data) {
     $http.put('/user/create', data).
-      success(function(response) {
+      then(function(response) {
         window.location = '/thanks.html';
-      }).error(function(err) {
+      }).catch(function(err) {
         var errorBody = $($("#errorModal")[0]).find(".modal-body")[0];
         errorBody.innerHTML = err;
         $("#errorModal").modal("toggle");
