@@ -25,7 +25,8 @@ module.exports = function(sequelize, DataTypes) {
 
     //Internal
     status: {type: DataTypes.STRING, defaultValue: 'pending'},
-    travel: DataTypes.STRING
+    travel: DataTypes.STRING,
+    how: DataTypes.STRING
   });
 
   return Users;

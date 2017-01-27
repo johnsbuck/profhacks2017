@@ -27,8 +27,8 @@ router.put('/create', function(req, res, next) {
 });
 
 router.put('/updatestatus', function(req, res, next) {
-  if(!req.body.how) {
-    req.body.how = "";
+  if(!req.body.data.how) {
+    req.body.data.how = "";
   }
   request.get('https://my.mlh.io/api/v2/user.json?access_token=' + req.body.token,
     function(err, response, body) {
