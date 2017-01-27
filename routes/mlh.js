@@ -34,7 +34,7 @@ router.get('/auth', function(req, res, next) {
 });
 
 router.get('/rsvp', function(req, res, next) {
-  var uri = mlhAuth.code.getUri();
+  var uri = mlhRsvp.code.getUri();
 
   res.redirect(uri);
   res.end();
@@ -69,8 +69,8 @@ router.get('/callback', function(req,res,next) {
     });
 });
 
-router.get('/callback', function(req,res,next) {
-  mlhAuth.code.getToken(req.originalUrl)
+router.get('/callbackrsvp', function(req,res,next) {
+  mlhRsvp.code.getToken(req.originalUrl)
     .then(function (user) {
       console.log(user) //=> { accessToken: '...', tokenType: 'bearer', ... }
 

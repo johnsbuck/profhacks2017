@@ -89,6 +89,55 @@ app.controller('formCtrl', function($scope, $http) {
   }
 });
 
+/*
+ * ACCEPT CONTROLLER
+ */
+
+app.controller('acceptCtrl', function($scope, $http) {
+  var token = window.location.search.split('=')[1]
+
+  if (typeof(token) === 'string') {
+    token = token.replace(/%22/gi, '')
+  } else {
+    //window.location = '/'
+  }
+
+  $scope.submit = function(data) {
+
+    if(!data) {
+      var errorBody = $($("#errorModal")[0]).find(".modal-body")[0];
+      errorBody.innerHTML = "<li> Please tell us if you are able or unable to come to ProfHacks </li>";
+      $("#errorModal").modal("toggle");
+      return;
+    }
+
+    if(errorCheckRsvp(data)) {
+      $("#errorModal").modal("toggle");
+      return;
+    }
+
+    var body = {data: data};
+    body.token = token;
+
+    $http.put('/user/updatestatus', body)
+      .success(function(response) {
+        if (body.data.accept) {
+          window.location = '/rsvp_able.html';
+        } else {
+          window.location = '/rsvp_unable.html';
+        }
+      }).error(function(err) {
+        var errorBody = $($("#errorModal")[0]).find(".modal-body")[0];
+        errorBody.innerHTML = err;
+        $("#errorModal").modal("toggle");
+      });
+  }
+});
+
+/*
+ * Functions
+ */
+
 function convertPhoneNumber(number) {
   if (typeof(number) === "undefined") {
     return number;
@@ -102,36 +151,24 @@ function convertPhoneNumber(number) {
   return number
 }
 
-app.controller('acceptCtrl', function($scope, $http) {
-  var token = window.location.search.split('=')[1]
+function errorCheckRsvp(data) {
+  var toggle = false;
+  var errorBody = $($("#errorModal")[0]).find(".modal-body")[0];
 
-  if (typeof(token) === 'string') {
-    token = token.replace(/%22/gi, '')
-  } else {
-    window.location = '/'
+  errorBody.innerHTML = "";
+
+  if (typeof(data.accept) !== "boolean") {
+    toggle = true;
+    errorBody.innerHTML = "<li> Please tell us if you are able or unable to come to ProfHacks </li>\n";
   }
 
-  $scope.update = function(data) {
-    $scope.data = angular.copy(data)
+  if (data.how && data.how.length > 255) {
+    toggle = true;
+    errorBody.innerHTML = "<li> Please shorten your answer for how you found out about ProfHacks </li>\n";
   }
 
-  $http.put('/mlh/user', {"token": token})
-    .error(function(data) {
-      window.location = '/'
-      console.log(data);
-    });
-
-  $scope.submit = function(data) {
-    $http.put('/user/create', data)
-      .success(function(response) {
-        window.location = '/thanks.html';
-      }).error(function(err) {
-        var errorBody = $($("#errorModal")[0]).find(".modal-body")[0];
-        errorBody.innerHTML = err;
-        $("#errorModal").modal("toggle");
-      });
-  }
-});
+  return toggle;
+}
 
 function errorCheckForm(data) {
   var toggle = false;
