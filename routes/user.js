@@ -5,6 +5,8 @@ var router = express.Router();
 
 /* GET users listing. */
 router.put('/create', function(req, res, next) {
+  res.status(403).send("Registration is closed.").end();
+  /*
   console.log(req.body);
   request.get('https://my.mlh.io/api/v2/user.json?access_token=' + req.body.token,
     function(err, response, body) {
@@ -24,6 +26,7 @@ router.put('/create', function(req, res, next) {
         });
       }
     });
+    */
 });
 
 router.put('/updatestatus', function(req, res, next) {
