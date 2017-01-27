@@ -42,7 +42,7 @@ router.put('/updatestatus', function(req, res, next) {
         body = JSON.parse(body);
 
         if(req.body.data.accept) {
-          req.body.data.status = "able";
+          req.body.data.status = "confirmed";
         } else {
           req.body.data.status = "unable";
         }
