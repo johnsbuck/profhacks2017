@@ -99,7 +99,7 @@ app.controller('acceptCtrl', function($scope, $http) {
   if (typeof(token) === 'string') {
     token = token.replace(/%22/gi, '')
   } else {
-    //window.location = '/'
+    window.location = '/'
   }
 
   $scope.submit = function(data) {
@@ -119,8 +119,8 @@ app.controller('acceptCtrl', function($scope, $http) {
     var body = {data: data};
     body.token = token;
 
-    $http.put('/user/updatestatus', body)
-      .success(function(response) {
+    $http.put('/user/updatestatus', body).
+      success(function(response) {
         if (body.data.accept) {
           window.location = '/rsvp_able.html';
         } else {
