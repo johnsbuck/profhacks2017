@@ -14,28 +14,29 @@ app.controller('formCtrl', function($scope, $http) {
   if (typeof(token) === 'string') {
     token = token.replace(/%22/gi, '')
   } else {
-    window.location = '/'
+    //window.location = '/'
   }
 
   $scope.update = function(data) {
     $scope.data = angular.copy(data)
   }
   $http.put('/mlh/user', {"token": token}).
-    then(function(data) {
+    then(function(body) {
+      data = body.data;
       if (typeof(data.data.date_of_birth) !== "string" || !validateDate(data.data.date_of_birth)) {
-        data.data.date_of_birth = "yyyy-MM-dd"
+        data.data.date_of_birth = "yyyy-MM-dd";
       }
 
       if (typeof(data.data.graduation) !== "string" || !validateDate(data.data.graduation)) {
-        data.data.graduation = "yyyy-MM-dd"
+        data.data.graduation = "yyyy-MM-dd";
       }
 
-      data.data.school = data.data.school.name
-      $scope.update(data.data)
+      data.data.school = data.data.school.name;
+      $scope.update(data.data);
 
-      console.log(data)
+      console.log(data);
     }).catch(function(data) {
-      window.location = '/'
+      //window.location = '/'
       console.log(data);
     });
 
