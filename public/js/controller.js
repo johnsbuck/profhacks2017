@@ -122,14 +122,16 @@ app.controller('acceptCtrl', function($scope, $http) {
 
     $http.put('/user/updatestatus', body)
       .then(function(response) {
+        console.log(response);
         if (body.data.accept) {
-          window.location = '/rsvp_able.html';
+          //window.location = '/rsvp_able.html';
         } else {
-          window.location = '/rsvp_unable.html';
+          //window.location = '/rsvp_unable.html';
         }
       }).catch(function(err) {
+        console.log(err);
         var errorBody = $($("#errorModal")[0]).find(".modal-body")[0];
-        errorBody.innerHTML = err;
+        errorBody.innerHTML = err.data;
         $("#errorModal").modal("toggle");
       });
   }

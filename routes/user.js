@@ -50,6 +50,9 @@ router.put('/updatestatus', function(req, res, next) {
           {status: req.body.data.status, how: req.body.data.how},
           {where: {id: body.data.id}}
         ).then(function(result) {
+          if (result[0] === 0) {
+              res.status(401).send("Not a registered user").end();
+          }
           res.status(201).end();
         }).catch(function(err) {
           res.status(401).send("Invalid").end();
