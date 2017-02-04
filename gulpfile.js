@@ -73,6 +73,12 @@ gulp.task('copy', function() {
 
     gulp.src(['node_modules/blob-util/dist/blob-util.js', 'node_modules/blob-util/dist/blob-util.min.js'])
         .pipe(gulp.dest('public/vendor/blob-util'))
+
+    gulp.src(['node_modules/papaparse/papaparse.js', 'node_modules/papaparse/papaparse.min.js'])
+        .pipe(gulp.dest('public/vendor/papaparse'))
+
+    gulp.src(['node_modules/mustache/mustache.js', 'node_modules/mustache/mustache.min.js'])
+        .pipe(gulp.dest('public/vendor/mustache'))
 })
 
 // Run everything
