@@ -115,7 +115,7 @@ router.get('/callbackrsvp', function(req,res,next) {
 });
 
 router.get('/callbackadmit', function(req,res,next) {
-  mlhRsvp.code.getToken(req.originalUrl)
+  mlhAdmit.code.getToken(req.originalUrl)
     .then(function (user) {
       console.log(user) //=> { accessToken: '...', tokenType: 'bearer', ... }
 
