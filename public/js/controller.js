@@ -14,7 +14,7 @@ app.controller('formCtrl', function($scope, $http) {
   if (typeof(token) === 'string') {
     token = token.replace(/%22/gi, '')
   } else {
-    //window.location = '/'
+    window.location = '/'
   }
 
   $scope.update = function(data) {
@@ -36,12 +36,12 @@ app.controller('formCtrl', function($scope, $http) {
 
       console.log(data);
     }).catch(function(data) {
-      //window.location = '/'
+      window.location = '/'
       console.log(data);
     });
 
   $scope.submit = function(data) {
-    //var modalBody = errorCheckForm(data);
+    var modalBody = errorCheckForm(data);
 
     if (typeof(data.school) !== 'string') {
       data.school = data.school.name

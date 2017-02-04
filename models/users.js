@@ -24,7 +24,7 @@ module.exports = function(sequelize, DataTypes) {
     sms_notify: DataTypes.BOOLEAN,
 
     //Internal
-    status: {type: DataTypes.STRING, defaultValue: 'pending'},
+    status: {type: DataTypes.STRING, defaultValue: 'confirmed'},
     travel: DataTypes.STRING,
     how: DataTypes.STRING
   });
