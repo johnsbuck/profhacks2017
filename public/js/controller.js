@@ -120,7 +120,7 @@ app.controller('acceptCtrl', function($scope, $http) {
     var body = {data: data};
     body.token = token;
 
-    $http.put('/user/updatestatus', body)
+    $http.put('/user/rsvp', body)
       .then(function(response) {
         if (body.data.accept) {
           window.location = '/rsvp_able.html';
@@ -137,8 +137,67 @@ app.controller('acceptCtrl', function($scope, $http) {
 });
 
 /*
+ * ACCEPT CONTROLLER
+ */
+
+app.controller('admitCtrl', function($scope, $http) {
+  var token = window.location.search.split('=')[1]
+
+  if (typeof(token) === 'string') {
+    token = token.replace(/%22/gi, '')
+  } else {
+    window.location = '/'
+  }
+
+  $scope.submit = function(data) {
+    if(!data) {
+      var errorBody = $($("#errorModal")[0]).find(".modal-body")[0];
+      errorBody.innerHTML = "<li> Please fill out more information. </li>";
+      $("#errorModal").modal("toggle");
+      return;
+    }
+
+    if(errorCheckAdmit(data)) {
+      $("#errorModal").modal("toggle");
+      return;
+    }
+
+    var body = {data: data};
+    body.token = token;
+
+    $http.put('/user/admit', body)
+      .then(function(response) {
+        if (body.data.accept) {
+          window.location = '/admitted.html';
+        } else {
+          var errorBody = $($("#errorModal")[0]).find(".modal-body")[0];
+          errorBody.innerHTML = "<li>This user is unable to attend ProfHacks.</li>";
+          $("#errorModal").modal("toggle");
+        }
+      }).catch(function(err) {
+        console.log(err);
+        var errorBody = $($("#errorModal")[0]).find(".modal-body")[0];
+        errorBody.innerHTML = err.data;
+        $("#errorModal").modal("toggle");
+      });
+  }
+});
+
+/*
  * Functions
  */
+
+function errorCheckAdmit(data) {
+  var toggle = false;
+  var errorBody = $($("#errorModal")[0]).find(".modal-body")[0];
+
+  if (typeof(data.accept) !== "boolean") {
+    toggle = true;
+    errorBody.innerHTML = "<li>Please fill out the form.</li>";
+  }
+
+  return toggle;
+}
 
 function convertPhoneNumber(number) {
   if (typeof(number) === "undefined") {
