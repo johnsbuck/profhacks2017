@@ -49,13 +49,6 @@ router.get('/rsvp', function(req, res, next) {
   res.end();
 });
 
-router.get('/admit', function(req, res, next) {
-  var uri = mlhAdmit.code.getUri();
-
-  res.redirect(uri);
-  res.end();
-});
-
 router.get('/callback', function(req,res,next) {
   mlhAuth.code.getToken(req.originalUrl)
     .then(function (user) {
@@ -108,35 +101,6 @@ router.get('/callbackrsvp', function(req,res,next) {
           res.redirect('/');
         } else {
           res.redirect('/accept.html?access_token=' + user.accessToken);
-        }
-        res.end();
-      });
-    });
-});
-
-router.get('/callbackadmit', function(req,res,next) {
-  mlhAdmit.code.getToken(req.originalUrl)
-    .then(function (user) {
-      console.log(user) //=> { accessToken: '...', tokenType: 'bearer', ... }
-
-      // Refresh the current users access token.
-      user.refresh().then(function (updatedUser) {
-        console.log(updatedUser !== user) //=> true
-        console.log(updatedUser.accessToken)
-      });
-
-      // Sign API requests on behalf of the current user.
-      user.sign({
-        method: 'get',
-        url: 'http://example.com'
-      })
-
-      // We should store the token into a database.
-      request.put({url: 'https://profhacks2017.herokuapp.com/mlh/user', form: {token: user.accessToken}}, function(err, response, body) {
-        if(err || response.statusCode !== 200) {
-          res.redirect('/');
-        } else {
-          res.redirect('/admit.html?access_token=' + user.accessToken);
         }
         res.end();
       });

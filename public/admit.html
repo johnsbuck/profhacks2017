@@ -156,7 +156,7 @@
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2">
         <div id="prof-form">
-          <h1 id="title">RSVP</h1>
+          <h1 id="title">Admission</h1>
           <br />
           <br />
           <form ng-controller="admitCtrl" name="admitForm" class="admitForm">
@@ -172,7 +172,21 @@
               </label>
             </div>
             <div class="form-group">
-              <label for="accept">Has the hacker filled out the 2 forms and has ID?</label><br>
+              <div class="form-group">
+                <label for="first-name">First Name (Required):</label>
+                <input type="text" ng-model="data.first_name" name="first_name" class="form-control">
+              </div>
+              <div class="form-group">
+                <label for="last-name">Last Name (Required):</label>
+                <input type="text" ng-model="data.last_name" name="last_name" class="form-control">
+              </div>
+              <div class="form-group">
+                <label for="last-name">School (Optional):</label>
+                <input type="text" ng-model="data.school" name="school" class="form-control">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="accept">Has the hacker filled out the 2 forms and has ID? (Required) (Check if they are a minor)</label><br>
               <input type="radio" ng-model="data.accept" name="sms_notifications" data-ng-value="true">&nbsp; Yes, they are ready for ProfHacks! &nbsp; <br />
               <input type="radio" ng-model="data.accept" name="sms_notifications" data-ng-value="false">&nbsp; No, they currently do not.
             </div>
