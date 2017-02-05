@@ -1,20 +1,37 @@
-expo,table,project,sponsors,link
-1,1,Make Nest Great Again,,http://profhacks.devpost.com/submissions/50492-make-nest-great-again
-1,2,The Archr,,http://profhacks.devpost.com/submissions/50499-the-archr
-1,3,GoSignYourself,,http://profhacks.devpost.com/submissions/50632-gosignyourself
-1,4,Meta-Journalism,,http://profhacks.devpost.com/submissions/50638-meta-journalism
-1,5,Nutruit,,http://profhacks.devpost.com/submissions/50641-nutruit
-1,6,Bolterizer,,http://profhacks.devpost.com/submissions/50647-bolterizer
-1,7,Twitter Home Hacks,,http://profhacks.devpost.com/submissions/50652-twitter-home-hacks
-1,8,GuardianAngel,,http://profhacks.devpost.com/submissions/50653-guardianangel
-1,9,SimpleNews,,http://profhacks.devpost.com/submissions/50654-simplenews
-1,10,NeuroSim,,http://profhacks.devpost.com/submissions/50655-neurosim
-1,11,Comfort-Meister,,http://profhacks.devpost.com/submissions/50656-comfort-meister
-1,12,MediRoute,,http://profhacks.devpost.com/submissions/50657-mediroute
-1,13,Vively,,http://profhacks.devpost.com/submissions/50658-vively
-1,14,Drivr,,http://profhacks.devpost.com/submissions/50659-drivr
-1,15,Vampire Slayer,,http://profhacks.devpost.com/submissions/50660-vampire-slayer
-1,16,Code Cubes,,http://profhacks.devpost.com/submissions/50661-code-cubes
-1,17,I Think I Left The Stove On ,,http://profhacks.devpost.com/submissions/50662-i-think-i-left-the-stove-on
-1,18,ASL MutePoint,,http://profhacks.devpost.com/submissions/50663-asl-mutepoint
-1,19,Rampant Recognition Security Camera Application,,http://profhacks.devpost.com/submissions/50664-rampant-recognition-security-camera-application
+expo,table,project,sponsors,link,category
+1,1,BizReport,,http://profhacks17.devpost.com/submissions/66314-bizreport,Business
+1,23,IT Simulator 2017,,http://profhacks17.devpost.com/submissions/66371-it-simulator-2017,
+1,24,Ceci n'est pas un website,Best Domain Name from Domain.com,http://profhacks17.devpost.com/submissions/66430-ceci-n-est-pas-un-website,
+1,25,Adaptive Website Interface,Best Domain Name from Domain.com,http://profhacks17.devpost.com/submissions/66442-adaptive-website-interface,
+1,10,PebbleDraw,.Tech Domain,http://profhacks17.devpost.com/submissions/66443-pebbledraw,Sensor Journalism
+1,26,Emergency Mobile Data Backup,"Best Domain Name from Domain.com, Amazon Web Services - Best Use of AWS",http://profhacks17.devpost.com/submissions/66470-emergency-mobile-data-backup,
+1,27,Domain Submission Dom and Noah,Best Domain Name from Domain.com,http://profhacks17.devpost.com/submissions/66471-domain-submission-dom-and-noah,
+1,2,a2b,Particle - Smart Cities IoT,http://profhacks17.devpost.com/submissions/66489-a2b,Business
+1,3,SchedulesU,Amazon Web Services - Best Use of AWS,http://profhacks17.devpost.com/submissions/66495-schedulesu,Business
+1,4,MouseLess,.Tech Domain,http://profhacks17.devpost.com/submissions/66498-mouseless,Business
+1,14,Poppy the Penguin,.Tech Domain,http://profhacks17.devpost.com/submissions/66505-poppy-the-penguin,Systems Engineering
+1,28,What Is Really Happening,".Tech Domain, Best Domain Name from Domain.com, Amazon Web Services - Best Use of AWS",http://profhacks17.devpost.com/submissions/66506-what-is-really-happening,
+1,15,Ballroom Kinection,"Best Domain Name from Domain.com, #HackHarassment",http://profhacks17.devpost.com/submissions/66509-ballroom-kinection,Systems Engineering
+1,29,Simple Home Invasion Alert System with Text Alert,,http://profhacks17.devpost.com/submissions/66511-simple-home-invasion-alert-system-with-text-alert,
+1,16,Alexa's Photon Smart Home,Particle - Smart Cities IoT,http://profhacks17.devpost.com/submissions/66517-alexa-s-photon-smart-home,Systems Engineering
+1,11,Elysian Hand Touch,,http://profhacks17.devpost.com/submissions/66526-elysian-hand-touch,Sensor Journalism
+1,5,Lyre,,http://profhacks17.devpost.com/submissions/66530-lyre,Business
+1,30,Gittale,,http://profhacks17.devpost.com/submissions/66532-gittale,
+1,31,Safe Houses,#HackHarassment,http://profhacks17.devpost.com/submissions/66535-safe-houses,
+1,17,Battle Bot - Ian Sean,,http://profhacks17.devpost.com/submissions/66540-battle-bot-ian-sean,Systems Engineering
+1,6,TUGO,,http://profhacks17.devpost.com/submissions/66541-tugo,Business
+1,32,Protest,,http://profhacks17.devpost.com/submissions/66544-protest,
+1,33,Airochord,,http://profhacks17.devpost.com/submissions/66545-airochord,
+1,18,Light_controller,,http://profhacks17.devpost.com/submissions/66546-light_controller,Systems Engineering
+1,7,[b]Roomie,"Best Domain Name from Domain.com, Amazon Web Services - Best Use of AWS",http://profhacks17.devpost.com/submissions/66547-b-roomie,Business
+1,34,Crooked News Network,"Best Domain Name from Domain.com, Amazon Web Services - Best Use of AWS",http://profhacks17.devpost.com/submissions/66548-crooked-news-network,
+1,35,MorseCodetoEnglish,,http://profhacks17.devpost.com/submissions/66549-morsecodetoenglish,
+1,19,Air!,,http://profhacks17.devpost.com/submissions/66552-air,Systems Engineering
+1,12,Survival,,http://profhacks17.devpost.com/submissions/66558-survival,Sensor Journalism
+1,20,Ardwasome,,http://profhacks17.devpost.com/submissions/66559-ardwasome,Systems Engineering
+1,13,OniPath,Best Domain Name from Domain.com,http://profhacks17.devpost.com/submissions/66561-onipath,Sensor Journalism
+1,21,Social Well,"Amazon Web Services - Best Use of AWS, #HackHarassment",http://profhacks17.devpost.com/submissions/66562-social-well,Systems Engineering
+1,8,Expediter,Amazon Web Services - Best Use of AWS,http://profhacks17.devpost.com/submissions/66565-expediter,Business
+1,22,"PartyBuddy, a party hosting app",,http://profhacks17.devpost.com/submissions/66569-partybuddy-a-party-hosting-app,Systems Engineering
+1,9,Cyber Stopper,#HackHarassment,http://profhacks17.devpost.com/submissions/66570-cyber-stopper,Business
+1,36,VoiceCalc,Best Domain Name from Domain.com,http://profhacks17.devpost.com/submissions/66578-voicecalc,
